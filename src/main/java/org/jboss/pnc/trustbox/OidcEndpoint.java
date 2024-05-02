@@ -19,6 +19,7 @@ public class OidcEndpoint {
     @Produces(MediaType.APPLICATION_JSON)
     @Path("token")
     public OidcTokenResponse getOidcToken(OidcTokenRequest oidcTokenRequest) {
-        return keycloakClient.getToken(oidcTokenRequest.authServerUrl, oidcTokenRequest.clientId, oidcTokenRequest.clientSecret);
+        return keycloakClient
+                .getToken(oidcTokenRequest.authServerUrl, oidcTokenRequest.clientId, oidcTokenRequest.clientSecret);
     }
 }
