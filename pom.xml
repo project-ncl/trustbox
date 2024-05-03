@@ -85,6 +85,7 @@
             <groupId>org.jboss.pnc</groupId>
             <artifactId>pnc-api</artifactId>
             <version>2.5.2-SNAPSHOT</version>
+            <classifier>jakarta</classifier>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>

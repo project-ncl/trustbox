@@ -2,7 +2,7 @@ package org.jboss.pnc.trustbox.keycloak;
 
 import io.quarkus.rest.client.reactive.QuarkusRestClientBuilder;
 import jakarta.enterprise.context.ApplicationScoped;
-import org.jboss.pnc.trustbox.OidcTokenResponse;
+import org.jboss.pnc.api.trustbox.OidcTokenResponse;
 
 import java.net.URI;
 
