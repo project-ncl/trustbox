@@ -7,7 +7,7 @@ import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
-import org.jboss.pnc.api.trustbox.OidcTokenResponse;
+import org.jboss.pnc.api.trustbox.TrustboxTokenResponse;
 
 @Path("/")
 @RegisterRestClient
@@ -17,5 +17,5 @@ public interface KeycloakService {
     @Path("/protocol/openid-connect/token")
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     @Produces(MediaType.APPLICATION_JSON)
-    public OidcTokenResponse getToken(@BeanParam KeycloakTokenRequest keycloakRequest);
+    public TrustboxTokenResponse getToken(@BeanParam KeycloakTokenRequest keycloakRequest);
 }

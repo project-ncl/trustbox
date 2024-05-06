@@ -3,8 +3,8 @@ package org.jboss.pnc;
 import io.quarkus.test.InjectMock;
 import io.quarkus.test.junit.QuarkusTest;
 import io.restassured.http.ContentType;
-import org.jboss.pnc.api.trustbox.OidcTokenRequest;
-import org.jboss.pnc.api.trustbox.OidcTokenResponse;
+import org.jboss.pnc.api.trustbox.TrustboxTokenRequest;
+import org.jboss.pnc.api.trustbox.TrustboxTokenResponse;
 import org.jboss.pnc.trustbox.keycloak.KeycloakClient;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -21,18 +21,18 @@ public class OidcEndpointImplTest {
 
     @BeforeEach
     public void setup() {
-        OidcTokenResponse response = OidcTokenResponse.builder().accessToken("access-token").build();
+        TrustboxTokenResponse response = TrustboxTokenResponse.builder().accessToken("access-token").build();
         Mockito.when(keycloakClient.getToken("keycloakUrl", "clientId", "clientSecret")).thenReturn(response);
     }
 
     @Test
     public void testEndpoint() {
-        OidcTokenRequest request = OidcTokenRequest.builder()
+        TrustboxTokenRequest request = TrustboxTokenRequest.builder()
                 .authServerUrl("keycloakUrl")
                 .clientId("clientId")
                 .clientSecret("clientSecret")
                 .build();
-        OidcTokenResponse response = given().when()
+        TrustboxTokenResponse response = given().when()
                 .body(request)
                 .contentType(ContentType.JSON)
                 .post("/oidc/token")
@@ -41,7 +41,7 @@ public class OidcEndpointImplTest {
                 .assertThat()
                 .extract()
                 .body()
-                .as(OidcTokenResponse.class);
+                .as(TrustboxTokenResponse.class);
         Assertions.assertEquals(response.getAccessToken(), "access-token");
     }
 }
