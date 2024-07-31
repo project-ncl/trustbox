@@ -9,10 +9,16 @@ import jakarta.ws.rs.core.MediaType;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 import org.jboss.pnc.api.trustbox.TrustboxTokenResponse;
 
+/**
+ * REST endpoint to get the OIDC token
+ */
 @Path("/")
 @RegisterRestClient
 public interface KeycloakService {
 
+    /**
+     * token endpoint, given the relevant keycloak information
+     */
     @POST
     @Path("/protocol/openid-connect/token")
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)

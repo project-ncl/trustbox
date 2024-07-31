@@ -7,6 +7,9 @@ import org.jboss.pnc.api.trustbox.TrustboxTokenRequest;
 import org.jboss.pnc.api.trustbox.TrustboxTokenResponse;
 import org.jboss.pnc.trustbox.keycloak.KeycloakClient;
 
+/**
+ * Implementation of the token endpoint
+ */
 @ApplicationScoped
 public class OidcEndpointImpl implements TrustboxEndpoint {
 

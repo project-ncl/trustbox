@@ -21,11 +21,22 @@ package org.jboss.pnc.trustbox.constants;
  * The values in here are auto-generated from Maven plugin maven-replacer-plugin and the template is found in the
  * template folder
  *
- * @author Dustin Kut Moy Cheung <dcheung@redhat.com>
+ * @author Dustin Kut Moy Cheung dcheung@redhat.com
  */
 public final class BuildInformationConstants {
 
+    /**
+     * Version of software
+     */
     public static final String VERSION = "@version@";
+
+    /**
+     * Git commit hash
+     */
     public static final String COMMIT_HASH = "@commit-id@";
+
+    /**
+     * Time this project is built
+     */
     public static final String BUILD_TIME = "@build-time@";
 }

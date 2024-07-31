@@ -8,12 +8,20 @@ import org.jboss.pnc.trustbox.constants.BuildInformationConstants;
 
 import java.time.ZonedDateTime;
 
+/**
+ * Main REST entry point for this application
+ */
 @Path("/")
 public class Public {
 
     @ConfigProperty(name = "quarkus.application.name")
     String name;
 
+    /**
+     * Get version of this application
+     * 
+     * @return version DTO
+     */
     @GET
     @Path("/version")
     public ComponentVersion getVersion() {
