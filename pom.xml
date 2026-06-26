@@ -122,7 +122,7 @@
         <dependency>
             <groupId>org.jboss.pnc</groupId>
             <artifactId>pnc-api</artifactId>
-            <version>3.5.0</version>
+            <version>3.5.1</version>
             <classifier>jakarta</classifier>
         </dependency>
         <dependency>
@@ -216,7 +216,7 @@
             <plugin>
                 <groupId>com.diffplug.spotless</groupId>
                 <artifactId>spotless-maven-plugin</artifactId>
-                <version>3.6.0</version>
+                <version>3.7.0</version>
                 <configuration>
                     <java>
                         <removeUnusedImports />
@@ -249,7 +249,7 @@
             <plugin>
                 <groupId>org.sonatype.central</groupId>
                 <artifactId>central-publishing-maven-plugin</artifactId>
-                <version>0.10.0</version>
+                <version>0.11.0</version>
                 <extensions>true</extensions>
                 <configuration>
                     <!-- as defined in your settings.xml -->
