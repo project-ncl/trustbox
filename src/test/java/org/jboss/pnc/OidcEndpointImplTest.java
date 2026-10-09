@@ -1,8 +1,7 @@
 package org.jboss.pnc;
 
-import io.quarkus.test.InjectMock;
-import io.quarkus.test.junit.QuarkusTest;
-import io.restassured.http.ContentType;
+import static io.restassured.RestAssured.given;
+
 import org.jboss.pnc.api.trustbox.TrustboxTokenRequest;
 import org.jboss.pnc.api.trustbox.TrustboxTokenResponse;
 import org.jboss.pnc.trustbox.keycloak.KeycloakClient;
@@ -11,7 +10,9 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
-import static io.restassured.RestAssured.given;
+import io.quarkus.test.InjectMock;
+import io.quarkus.test.junit.QuarkusTest;
+import io.restassured.http.ContentType;
 
 @QuarkusTest
 public class OidcEndpointImplTest {
