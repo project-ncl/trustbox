@@ -2,6 +2,7 @@ package org.jboss.pnc.trustbox;
 
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
+
 import org.jboss.pnc.api.trustbox.TrustboxEndpoint;
 import org.jboss.pnc.api.trustbox.TrustboxTokenRequest;
 import org.jboss.pnc.api.trustbox.TrustboxTokenResponse;
