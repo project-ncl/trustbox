@@ -1,12 +1,13 @@
 package org.jboss.pnc.trustbox;
 
+import java.time.ZonedDateTime;
+
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
+
 import org.eclipse.microprofile.config.inject.ConfigProperty;
 import org.jboss.pnc.api.dto.ComponentVersion;
 import org.jboss.pnc.trustbox.constants.BuildInformationConstants;
-
-import java.time.ZonedDateTime;
 
 /**
  * Main REST entry point for this application

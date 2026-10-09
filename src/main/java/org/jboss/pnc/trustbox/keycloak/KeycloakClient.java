@@ -1,10 +1,12 @@
 package org.jboss.pnc.trustbox.keycloak;
 
-import io.quarkus.rest.client.reactive.QuarkusRestClientBuilder;
+import java.net.URI;
+
 import jakarta.enterprise.context.ApplicationScoped;
+
 import org.jboss.pnc.api.trustbox.TrustboxTokenResponse;
 
-import java.net.URI;
+import io.quarkus.rest.client.reactive.QuarkusRestClientBuilder;
 
 /**
  * Class that will fetch the OIDC token given relevant information
